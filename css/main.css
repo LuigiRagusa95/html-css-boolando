@@ -14,3 +14,12 @@ body {
     height: 100%;
     font-family: sans-serif;
 }
+
+/* UTILITIES */
+.bg-green {
+    background-color: #2f865a;
+}
+
+.bg-red {
+    background-color: #de0a39;
+}
