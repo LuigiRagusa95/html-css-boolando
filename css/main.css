@@ -118,3 +118,7 @@ body {
 .card:hover .card-gallery > .card-image:last-of-type {
     display: inline-block;
 }
+
+.card:hover .card-button {
+    color: #de0a39;
+}
