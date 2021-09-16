@@ -44,7 +44,7 @@ body {
     width: calc((100% / 3) - 5%);
 }
 
-.card img {
+.card .card-image {
     width: 100%;
 }
 
@@ -103,4 +103,18 @@ body {
     color: #de0a39;
     font-weight: 600;
     margin-right: 8px;
+}
+
+/* ITERATION */
+
+.card-gallery img:last-of-type {
+    display: none;
+}
+
+.card:hover .card-gallery > .card-image:first-of-type {
+    display: none;
+}
+
+.card:hover .card-gallery > .card-image:last-of-type {
+    display: inline-block;
 }
