@@ -55,6 +55,7 @@ body {
 .card-button {
     right: 0;
     top: 16px;
+    z-index: 3;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -64,8 +65,17 @@ body {
     background-color: #ffffff;
 }
 
+.card-gallery {
+    overflow: hidden;
+}
+
+.card-gallery img {
+    animation: zoom-out 500ms ease forwards;
+}
+
 .card-badges {
     left: 0;
+    z-index: 3;
     bottom: 32px;
     position: absolute;
 }
@@ -118,8 +128,29 @@ body {
 
 .card:hover .card-gallery > .card-image:last-of-type {
     display: inline-block;
+    animation: zoom-in 500ms ease forwards;
 }
 
 .card:hover .card-button {
     color: #de0a39;
+}
+
+/* BONUS ANIMATION */
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
